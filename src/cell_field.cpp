@@ -49,11 +49,11 @@ CellsField::~CellsField (void){
     cellsField = NULL;
 }
 
-size_t CellsField::getHeight (void)const {
+inline size_t CellsField::getHeight (void)const {
     return cfHeight;
 }
 
-size_t CellsField::getWidth (void)const {
+inline size_t CellsField::getWidth (void)const {
     return cfWidth;
 }
 
@@ -105,4 +105,25 @@ CellsField& CellsField::operator= (const CellsField& cellsfield){
 CellsField getMooreNeighborhoodOf1stOrder (const CLCS& cellCoord)const{
     //TODO
     return CellsField();
+}
+
+// additional methods
+inline size_t getLowerBorderForMooreNeighborhood(size_t firstCoord)const{
+    size_t result = cfHeight - 1;
+
+    if (firstCoord){
+        result = firstCoord - 1;
+    }
+
+    return result;
+}
+
+inline size_t getLeftBorderForMooreNeighborhood(size_t secondCoord)const{
+    size_t result = cfWidth - 1;
+
+    if (secondCoord){
+        result = secondCoord - 1;
+    }
+
+    return result;
 }
