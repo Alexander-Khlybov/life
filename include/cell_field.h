@@ -28,4 +28,7 @@ private:
     size_t** cellsField;
     size_t cfHeight;
     size_t cfWidth;
+
+    size_t getLowerBorderForMooreNeighborhood(size_t firstCoord)const;
+    size_t getLeftBorderForMooreNeighborhood(size_t secondCoord)const;
 };
