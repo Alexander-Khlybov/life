@@ -13,15 +13,15 @@ public:
     ~CellsField (void);
 
     // getting height and width of cells field
-    size_t getHeight (void);
-    size_t getWidth (void);
+    size_t getHeight (void)const;
+    size_t getWidth (void)const;
 
     // access to data and change data of cells field
     void setCellData (const CLCS& cellCoord, size_t cellValue);
-    size_t getCellData (const CLCS& cellCoord);
+    size_t getCellData (const CLCS& cellCoord)const;
 
     // getting Moore neighborhood of the first order: cells field 3x3
-    CellsField getMooreNeighborhoodOf1stOrder (const CLCS& cellCoord);
+    CellsField getMooreNeighborhoodOf1stOrder (const CLCS& cellCoord)const;
 
     cellsField& operator= (const CellsField& cellsfield);
 private:
