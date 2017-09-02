@@ -1,7 +1,7 @@
 #pragma once
 
-#define BASE_CELLS_FIELD_HEIGHT
-#define BASE_CELLS_FIELD_WIDTH
+#define BASE_CELLS_FIELD_HEIGHT 100
+#define BASE_CELLS_FIELD_WIDTH  200
 
 typedef pair<size_t, size_t> CLCS; //Cell coordinates
 typedef size_t* VEC;
