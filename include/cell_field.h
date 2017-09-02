@@ -23,7 +23,7 @@ public:
     // getting Moore neighborhood of the first order: cells field 3x3
     CellsField getMooreNeighborhoodOf1stOrder (const CLCS& cellCoord)const;
 
-    cellsField& operator= (const CellsField& cellsfield);
+    CellsField& operator= (const CellsField& cellsfield);
 private:
     size_t** cellsField;
     size_t cfHeight;
